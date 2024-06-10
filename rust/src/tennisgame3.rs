@@ -42,19 +42,20 @@ impl TennisGame for TennisGame3 {
                 } else {
                     p[self.p2 as usize]
                 };
-        } else {
-            if self.p1 == self.p2 {
-                return "Deuce".to_string();
-            }
-            let s = if self.p1 > self.p2 {
-                self.p1n.clone()
-            } else {
-                self.p2n.clone()
-            };
-            if (self.p1 as i16 - self.p2 as i16) * (self.p1 as i16 - self.p2 as i16) == 1 {
-                return "Advantage ".to_string() + s.as_str();
-            }
-            return "Win for ".to_string() + s.as_str();
         }
+        if self.p1 == self.p2 {
+            return "Deuce".to_string();
+        }
+
+        let s = if self.p1 > self.p2 {
+            self.p1n.clone()
+        } else {
+            self.p2n.clone()
+        };
+
+        if (self.p1 as i16 - self.p2 as i16) * (self.p1 as i16 - self.p2 as i16) == 1 {
+            return "Advantage ".to_string() + s.as_str();
+        }
+        return "Win for ".to_string() + s.as_str();
     }
 }

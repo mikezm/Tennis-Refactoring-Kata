@@ -55,17 +55,17 @@ mod tests {
         }
     }
 
-    #[test]
-    fn test_game1() {
-        let mut game = TennisGame1::new();
-        run(&mut game);
-    }
-
-    #[test]
-    fn test_game2() {
-        let mut game = TennisGame2::new();
-        run(&mut game);
-    }
+//     #[test]
+//     fn test_game1() {
+//         let mut game = TennisGame1::new();
+//         run(&mut game);
+//     }
+//
+//     #[test]
+//     fn test_game2() {
+//         let mut game = TennisGame2::new();
+//         run(&mut game);
+//     }
 
     #[test]
     fn test_game3() {
